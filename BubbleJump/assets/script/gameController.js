@@ -8,8 +8,12 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
+        this.physicsManager();
+    },
+    
+    physicsManager(){
         let physics_manager = cc.director.getPhysicsManager();
         physics_manager.enabled = true;
-        physics_manager.gravity = cc.v2(0, -2000)
+        physics_manager.gravity = cc.v2(0, -2000);
     },
 });

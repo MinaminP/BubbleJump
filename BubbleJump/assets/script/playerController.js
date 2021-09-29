@@ -12,7 +12,6 @@ cc.Class({
     onLoad () {
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyPressed, this);
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyReleased, this);
-
         this.Rigid_Body = this.node.getComponent(cc.RigidBody);
         this.Direction = 0;
         this.Grounded = false;
