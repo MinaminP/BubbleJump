@@ -1,10 +1,3 @@
-// Learn cc.Class:
-//  - https://docs.cocos.com/creator/manual/en/scripting/class.html
-// Learn Attribute:
-//  - https://docs.cocos.com/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
-
 cc.Class({
     extends: cc.Component,
 
@@ -16,9 +9,13 @@ cc.Class({
 
     onLoad () {
         this.node.on('touchstart', this.bubble_pop_animation, this);
+        //this.Rigid_Body = this.node.getComponent(cc.RigidBody);
     },
+
     bubble_pop(){
         console.log("bubble pop");
+        Global.maxSpawn++;
+        Global.isPopped = true;
         this.node.destroy();
     },
 

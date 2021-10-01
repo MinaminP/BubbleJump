@@ -1,10 +1,3 @@
-// Learn cc.Class:
-//  - https://docs.cocos.com/creator/manual/en/scripting/class.html
-// Learn Attribute:
-//  - https://docs.cocos.com/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
-
 cc.Class({
     extends: cc.Component,
 
@@ -14,7 +7,7 @@ cc.Class({
         posX:0,
         posY:0,
         //nodeCanvas: cc.Node,
-        maxSpawn: 0,
+        //maxSpawn: 0,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -30,7 +23,7 @@ cc.Class({
         //var currentPos = this.node.getPosition();
 
         //currentPos.lerp(targetPos,0.1,currentPos);
-        if(this.maxSpawn > 0){
+        if(Global.maxSpawn > 0){
             var bubble = cc.instantiate(this.bubblePrefab);
             this.node.addChild(bubble);
             
@@ -39,7 +32,7 @@ cc.Class({
 
             bubble.setPosition(mousePos);
             //bubble = this.target;
-            //this.maxSpawn--;
+            Global.maxSpawn--;
         }
     },
 });

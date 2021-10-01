@@ -26,12 +26,12 @@ cc.Class({
             case cc.macro.KEY.right:
                 this.Direction = 1;
             break;    
-            case cc.macro.KEY.up:
-                if(this.Grounded){
-                    this.Rigid_Body.applyForceToCenter(cc.v2(0, this.jumpForce), true);
-                    this.Grounded = false;
-                }
-            break;    
+            //case cc.macro.KEY.up:
+              //  if(this.Grounded){
+                //    this.Rigid_Body.applyForceToCenter(cc.v2(0, this.jumpForce), true);
+                  //  this.Grounded = false;
+                //}
+            //break;    
         }
     },
 

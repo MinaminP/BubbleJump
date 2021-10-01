@@ -4,11 +4,15 @@ cc.Class({
     properties: {
        
     },
-
+    
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
         this.physicsManager();
+        window.Global = {
+            maxSpawn: 4,
+            isPopped: false,
+        };
     },
     
     physicsManager(){
